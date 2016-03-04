@@ -19,7 +19,7 @@ while x == 1:
     if action == "e":
         encryptionText = str(input("Message: "))
         key = str(input("Key: "))
-        
+        numberText = encryption
     
     elif action == "d":
         encryptionText = str(input("Message: "))
