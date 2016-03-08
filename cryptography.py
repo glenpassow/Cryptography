@@ -10,6 +10,7 @@ Write and submit a program that encrypts and decrypts user data.
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
 x = 1
+y = 87
 while x == 1:
 
     associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
@@ -19,7 +20,12 @@ while x == 1:
     if action == "e":
         encryptionText = str(input("Message: "))
         key = str(input("Key: "))
-        numberText = encryption
+        
+        l = []
+        for z in encryptionText:
+            l.append(associations.index(encryptionText))
+            print(l)
+        
     
     elif action == "d":
         encryptionText = str(input("Message: "))
