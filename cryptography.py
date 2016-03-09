@@ -21,10 +21,8 @@ while x == 1:
         encryptionText = str(input("Message: "))
         key = str(input("Key: "))
         
-        l = []
-        for z in encryptionText:
-            l.append(associations.index(encryptionText))
-            print(l)
+        l = [associations.find(x)for x in encryptionText]
+        print(l)
         
     
     elif action == "d":
