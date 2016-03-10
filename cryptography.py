@@ -25,6 +25,11 @@ while x == 1:
         k = [associations.find(x)for x in key] 
         
         cyclesMajor = len(l) // len(k)+1
+        b = cyclesMajor
+        
+        while b > 0:
+            k.extend(k)
+            b = b - 1
         
         encryptionAddition = [k]*cyclesMajor
         encryptionAddition 
