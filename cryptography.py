@@ -22,13 +22,14 @@ while x == 1:
         key = str(input("Key: "))
         
         l = [associations.find(x)for x in encryptionText]
-        lChar = len(l)
-        
         k = [associations.find(x)for x in key] 
-        kChar = len(k)
         
-        print(lChar)
-        print(kChar)
+        cyclesMajor = len(l) // len(k)+1
+        
+        encryptionAddition = [k]*cyclesMajor
+        encryptionAddition 
+        print (encryptionAddition)
+        print(cyclesMajor)
         
     
     elif action == "d":
