@@ -31,9 +31,8 @@ while x == 1:
             k.extend(k)
             b = b - 1
         
-        encryptionAddition = [k]*cyclesMajor
-        encryptionAddition 
-        print (encryptionAddition)
+
+        print (k)
         print(cyclesMajor)
         
     
