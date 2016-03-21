@@ -24,8 +24,13 @@ while x == 1:
         l = [associations.find(x)for x in encryptionText]
         k = [associations.find(x)for x in key] 
         
-        cyclesMajor = len(l) // len(k)+1
+        print(len(l))
+        print(len(k))
+        
+        cyclesMajor = len(l) // len(k)
         b = cyclesMajor
+        
+        print(b)
         
         while b > 0:
             k.extend(k)
