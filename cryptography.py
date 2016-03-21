@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Glen Passow
-Credit: Tess Snyder
+Credit: Tess Snyder, stack overflow
 
 Assignment:
 
