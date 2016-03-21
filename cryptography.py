@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Glen Passow
-Credit: Tess Snyder, stack overflow
+Credit: Tess Snyder, stack overflow, david wilson
 
 Assignment:
 
@@ -13,7 +13,7 @@ x = 1
 y = 87
 while x == 1:
 
-    associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
+    associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 
     action = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
 
@@ -24,9 +24,6 @@ while x == 1:
         l = [associations.find(x)for x in encryptionText]
         k = [associations.find(x)for x in key] 
         
-        print(len(l))
-        print(len(k))
-        
         cyclesMajor = len(l) // len(k)
         b = cyclesMajor
         
@@ -36,9 +33,11 @@ while x == 1:
             k.extend(k)
             b = b - 1
         
-
-        print (k)
-        print(cyclesMajor)
+        encrypted = [x + y for x, y in zip(k, l)]
+        print(encrypted)
+        
+        for x in encrypted:
+            print(associations[x],end="")
         
     
     elif action == "d":
