@@ -27,14 +27,11 @@ while x == 1:
         cyclesMajor = len(l) // len(k)
         b = cyclesMajor
         
-        print(b)
-        
         while b > 0:
             k.extend(k)
             b = b - 1
         
         encrypted = [x + y for x, y in zip(k, l)]
-        print(encrypted)
         
         for x in encrypted:
             print(associations[x],end="")
@@ -43,6 +40,21 @@ while x == 1:
     elif action == "d":
         encryptionText = str(input("Message: "))
         key = str(input("Key: "))
+        
+        l = [associations.find(x)for x in encryptionText]
+        k = [associations.find(x)for x in key] 
+        
+        cyclesMajor = len(l) // len(k)
+        b = cyclesMajor
+        
+        while b > 0:
+            k.extend(k)
+            b = b - 1
+        
+        encrypted = [x - y for x, y in zip(l, k)]
+        
+        for x in encrypted:
+            print(associations[x],end="")
         
     
     elif action == "q":
